@@ -1,0 +1,33 @@
+<div class="header">
+  Hello new user
+</div>
+<form [formGroup]="passwordForm" (ngSubmit)="confirmUser()">
+  <div class="input-container">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" [type]="passwordFieldType"
+             [formControl]="password">
+      <button mat-icon-button matSuffix type="button" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hidePassword" (click)="showOrHidePassword()">
+        <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="password.hasError('required')">
+        Password is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="input-container">
+    <mat-form-field>
+      <input matInput placeholder="Repeat password" [type]="passwordFieldType"
+             [formControl]="repeatPassword">
+      <mat-error *ngIf="repeatPassword.hasError('required')">
+        Repeat password is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="repeatPassword.hasError('notSame')">
+        Passwords not the same
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="input-container">
+    <button mat-button class="login-button" [disabled]="!passwordForm.valid">Confirm</button>
+  </div>
+</form>

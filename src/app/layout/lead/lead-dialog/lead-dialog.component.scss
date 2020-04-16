@@ -1,0 +1,65 @@
+.title {
+  height: 130px;
+  max-width: 530px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, #003aad, #0059bc, #0071be, #0086b9, #0099b2, #17a5b6, #2db2b9, #42bebb, #53c9cc, #64d5dc, #75e0ec, #87ebfc);
+}
+
+.icon {
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.fields-row {
+  display: flex;
+  margin: 10px 20px;
+  justify-content: space-between;
+}
+
+mat-form-field {
+  max-width: 225px;
+  width: 100%;
+}
+
+.mat-dialog-content {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  height: 100%;
+  position: relative;
+}
+
+.form-btn {
+  position: absolute;
+  right: 20px;
+  padding: 0 30px;
+}
+
+.dialog-title {
+  margin-left: 25px;
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  .fields-row {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .title {
+    height: 40px;
+    align-items: center;
+  }
+
+  mat-form-field {
+    max-width: 275px;
+  }
+
+  .dialog-title {
+    font-size: 15px;
+  }
+}

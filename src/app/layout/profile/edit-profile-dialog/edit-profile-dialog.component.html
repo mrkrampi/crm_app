@@ -1,0 +1,35 @@
+<div mat-dialog-title class="title">
+  <div class="icon" (click)="cancelDialog()">
+    <mat-icon>clear</mat-icon>
+  </div>
+</div>
+<div mat-dialog-content class="container">
+  <form class="fields-container" [formGroup]="userForm" (ngSubmit)="saveUser()">
+    <div class="fields-row">
+      <mat-form-field>
+        <input matInput placeholder="First name" [formControl]="userForm.get('firstName')">
+        <mat-error *ngIf="userForm.get('firstName').hasError('required')">
+          Field is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="userForm.get('firstName').hasError('maxlength')">
+          First name is too long
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Last name" [formControl]="userForm.get('lastName')">
+        <mat-error *ngIf="userForm.get('lastName').hasError('required')">
+          Field is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="userForm.get('lastName').hasError('maxlength')">
+          Last name is too long
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="fields-row">
+      <mat-form-field class="email-field">
+        <input matInput placeholder="Email" [formControl]="userForm.get('email')">
+      </mat-form-field>
+    </div>
+    <button mat-button type="submit" class="form-btn" [disabled]="!userForm.valid">Save</button>
+  </form>
+</div>

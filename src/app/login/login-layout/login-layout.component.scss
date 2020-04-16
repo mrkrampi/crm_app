@@ -1,0 +1,22 @@
+.container {
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 992px) {
+    margin: 50px 20px;
+  }
+}
+
+.side-panel {
+  flex: 1 1 0;
+
+  &:first-child {
+    height: 100vh;
+    background: #31344e url("../../../assets/images/side-img.jpg") no-repeat center / cover;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}

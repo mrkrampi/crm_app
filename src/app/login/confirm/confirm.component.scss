@@ -1,0 +1,72 @@
+.container {
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.side-panel {
+  flex: 1 1 0;
+
+  &:first-child {
+    height: 100vh;
+    background: #31344e url("../../../assets/images/side-img.jpg") no-repeat center / cover;
+  }
+}
+
+.input-container {
+  width: 100%;
+  max-width: 445px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.header {
+  color: #3a3fdc;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.forgot-pass {
+  text-align: right;
+
+  & a {
+    color: #B0BEC7;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: underline;
+  }
+}
+
+.sign-up {
+  color: #363636;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+
+  a {
+    color: #363636;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .side-panel:first-child {
+    display: none;
+  }
+
+  .side-panel:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,160 @@
+.container {
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.main-block {
+  width: 100%;
+  height: 350px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: '';
+    border-radius: 4px 4px 0 0;
+    height: 150px;
+    background-image: linear-gradient(to right, #003aad, #0059bc, #0071be, #0086b9, #0099b2, #17a5b6, #2db2b9, #42bebb, #53c9cc, #64d5dc, #75e0ec, #87ebfc);
+  }
+}
+
+.main-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  background-color: #31344e;
+  clip-path: circle(50.0% at 50% 50%);
+  z-index: 1;
+  position: relative;
+
+  img {
+    width: 150px;
+    height: 150px;
+    clip-path: circle(50.0% at 50% 50%);
+  }
+}
+
+.change-photo-text {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  mat-icon {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+
+.user-name {
+  margin: 10px;
+  color: #3a3fdc;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-info {
+  width: 44%;
+  padding: 20px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.header {
+  color: #3a3fdc;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.password {
+  width: 44%;
+  padding: 20px;
+  height: 100px;
+  background-color: #ffffff;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #3a3fdc;
+  cursor: pointer;
+}
+
+.fields {
+  margin-top: 30px;
+
+  & .mat-form-field {
+    width: 100%;
+  }
+
+  & input {
+    color: black;
+  }
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: calc(100% - 50px);
+  }
+
+  .profile-info,
+  .password {
+    max-width: 42%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .profile-info,
+  .password {
+    max-width: calc(100% - 40px);
+    margin-bottom: 10px;
+  }
+}

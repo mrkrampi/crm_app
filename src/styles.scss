@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background: #f4f6f8;
+}
+
+.app-full-bleed-dialog .mat-dialog-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.form-btn {
+  background-color: #1C39BB;
+  border: 0;
+  border-radius: 4px;
+  padding: 0 30px;
+  height: 40px;
+  cursor: pointer;
+
+  color: #FFFFFF;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 0;
+  text-align: center;
+
+  &:hover {
+    background-color: darken(#1C39BB , 10);
+  }
+}
+
+.fields .mat-form-field-underline {
+  width: 0 !important; // we need important, cause I want to overwrite material rules
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 5px;
+}
+
+
+table .mat-form-field {
+  padding: 10px 20px 0;
+  font-size: 14px;
+  margin-left: 20px;
+  width: 85%;
+}
+
+table .table-header {
+  color: #1C39BB ;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+}
+
+mat-spinner {
+  margin: 30vh auto 0;
+}
+
+.status-dropdown .mat-select-arrow {
+  border: none !important; // I want to overwrite material rules
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  .mat-form-field {
+    width: 90%;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table-container {
+    width: 650px;
+  }
+}
+
+.login-button {
+  background-color: #3a3fdc;
+  border: 0;
+  border-radius: 4px;
+  max-width: 445px;
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+
+  &:hover {
+    background-color: darken(#3a3fdc, 10);
+  }
+
+  &[disabled] {
+    color: darken(#FFFFFF, 30);
+  }
+}

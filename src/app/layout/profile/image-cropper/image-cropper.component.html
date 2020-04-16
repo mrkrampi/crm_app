@@ -1,0 +1,11 @@
+<div class="cropper-container">
+  <div class="img-container">
+    <ngx-cropperjs #angularCropper [cropperOptions]="options" [imageUrl]="imageSource"
+                   (export)="saveCropped($event)"></ngx-cropperjs>
+  </div>
+  <div class="button-container">
+    <button mat-button (click)="dialogRef.close()">Close</button>
+    <button mat-button (click)="saveCanvas()">Save</button>
+  </div>
+</div>
+

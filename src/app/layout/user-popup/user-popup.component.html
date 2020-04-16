@@ -1,0 +1,20 @@
+<div class="profile-img" [matMenuTriggerFor]="beforeMenu">
+  <img *ngIf="currentUser && currentUser.photoURL" [src]="currentUser.photoURL" alt="avatar">
+</div>
+<mat-menu #beforeMenu="matMenu" class="popup" backdropClass="popup">
+  <div class="person-data" *ngIf="currentUser">
+    <div class="profile-img">
+      <img *ngIf="currentUser && currentUser.photoURL" [src]="currentUser.photoURL" alt="avatar">
+    </div>
+    <div class="user-data">
+      <span class="user-name">Hello, {{currentUser.name}}</span>
+      <br>
+      <a routerLink="/profile">My Account</a>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <button class="mr-40" mat-menu-item (click)="signOut()">
+    <mat-icon class="material-icons color_green">power_settings_new</mat-icon>
+    Sign out
+  </button>
+</mat-menu>

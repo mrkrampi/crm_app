@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+}
+
+span {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1C39BB;
+  display: block;
+  margin: 20px 0 20px;
+  font-family: Montserrat, sans-serif;
+}
+
+th {
+  font-size: 12px;
+  font-weight: bold;
+  color: #1C39BB;
+}
+
+td {
+  font-size: 15px;
+}
+
+.add-status {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 150px;
+  height: 35px;
+  border: 0;
+  color: #1C39BB;
+  font-weight: bold;
+  background-color: #003AAD;
+  font-size: 17px;
+}
+
+.add-status:hover {
+  color: #003AAD;
+  background-color: #64d5dc;
+}

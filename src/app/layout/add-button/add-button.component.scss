@@ -1,0 +1,15 @@
+.addition {
+  margin: 0 auto;
+  width: 57px;
+  height: 57px;
+  background-image: url(../../../assets/images/add.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 576px) {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 3;
+  }
+}

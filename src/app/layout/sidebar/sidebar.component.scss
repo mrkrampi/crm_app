@@ -1,0 +1,30 @@
+.sidebar-container{
+  position: fixed;
+  z-index: 2;
+}
+.sidebar{
+  position: absolute;
+  top: 65px;
+  height: calc(100vh - 65px);
+  width: 85px;
+  background-image: linear-gradient(to bottom, #003aad, #0059bc, #0071be, #0086b9, #0099b2, #17a5b6, #2db2b9, #42bebb, #53c9cc, #64d5dc, #75e0ec, #87ebfc);
+}
+.inside-sidebar{
+  margin: 40px 0;
+}
+.link{
+  display: block;
+  margin: auto;
+}
+.statuses{
+  width: 32px;
+  height: 32px;
+  background-image: url(../../../assets/images/status-icon.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 35px;
+  transition: all 200ms ease-in;
+}
+.statuses:hover{
+  background-image: url(../../../assets/images/status-hover.svg);
+}

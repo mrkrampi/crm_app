@@ -1,0 +1,16 @@
+<header class="header-container">
+  <div class="inside-header">
+    <button mat-button fxHide="false" fxHide.gt-xs (click)="sidenav.toggle()" (mousedown)="$event.preventDefault()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="logo-block">
+      <a routerLink=""></a>
+      <span>{{pageName}}</span>
+    </div>
+    <div class="link-blocks" fxHide="false" fxHide.lt-sm>
+      <a routerLink="">Leads</a>
+      <a routerLink="/users">Users</a>
+    </div>
+    <app-user-popup fxHide="false" fxHide.lt-sm></app-user-popup>
+  </div>
+</header>

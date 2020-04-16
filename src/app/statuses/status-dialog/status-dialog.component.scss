@@ -1,0 +1,61 @@
+.title {
+  height: 45px;
+  width: 100%;
+  background-image: linear-gradient(to right, #003aad, #0059bc, #0071be, #0086b9, #0099b2, #17a5b6, #2db2b9, #42bebb, #53c9cc, #64d5dc, #75e0ec, #87ebfc);
+}
+
+.icon {
+  color: #ffffff;
+  padding: 10px;
+  text-align: right;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon span {
+  left: 22px;
+  top: 7px;
+  position: absolute;
+}
+
+.fields-row {
+  margin: 10px 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-dialog-content {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-height: 210px;
+  height: 100%;
+  position: relative;
+}
+
+.save-button {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+
+  background-color: #1C39BB;
+  border: 0;
+  border-radius: 4px;
+  max-width: 110px;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+
+  color: #FFFFFF;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 0;
+  text-align: center;
+
+  &:hover {
+    background-color: darken(#1C39BB, 10);
+  }
+}

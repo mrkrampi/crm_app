@@ -1,0 +1,22 @@
+<div mat-dialog-title class="title">
+  <div class="icon" (click)="cancelDialog()">
+    <span>Add a new status</span>
+    <mat-icon>clear</mat-icon>
+  </div>
+</div>
+<div mat-dialog-content class="container">
+  <form class="fields-container" [formGroup]="statusForm" (ngSubmit)="saveStatus()">
+    <div class="fields-row">
+      <mat-form-field>
+        <input matInput placeholder="Status Name" [formControl]="statusForm.get('name')">
+        <mat-error *ngIf="statusForm.get('name').hasError('required')">
+          Field is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Description" [formControl]="statusForm.get('description')">
+      </mat-form-field>
+    </div>
+    <button mat-button type="submit" class="save-button" [disabled]="!statusForm.valid">Save</button>
+  </form>
+</div>

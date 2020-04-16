@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="main-block">
+    <div class="main-content">
+      <div class="profile-image" (click)="filee.nativeElement.click()">
+        <img *ngIf="currentUser && currentUser.photoURL" [src]="currentUser.photoURL" alt="avatar">
+        <div class="change-photo-text">
+          <mat-icon>camera_alt</mat-icon>
+        </div>
+      </div>
+      <input type="file" accept="image/*" class="hidden" #file (change)="loadImage($event.target.files[0])" (mouseup)="suka()">
+      <div class="user-name" *ngIf="user">{{user.firstName + ' ' + user.lastName}}</div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="profile-info">
+      <div class="edit-icon">
+        <mat-icon (click)="editUser()">edit</mat-icon>
+      </div>
+      <div class="header">Personal info</div>
+      <div class="fields" *ngIf="user">
+        <mat-form-field>
+          <input matInput placeholder="Email" disabled [value]="user.email">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Role" disabled [value]="user.role">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="password">
+      <div class="header">Password</div>
+      <div class="button-container">
+        <button mat-button type="submit" class="form-btn" (click)="changePassword()">Change password</button>
+      </div>
+    </div>
+  </div>
+</div>
