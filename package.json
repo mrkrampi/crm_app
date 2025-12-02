@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "~8.0.1",
     "@angular/router": "~8.0.1",
     "@auth0/angular-jwt": "^3.0.0",
-    "express": "^4.17.1",
+    "express": "^4.22.0",
     "firebase": "^6.3.3",
     "ngx-cropperjs": "^0.1.9",
     "path": "^0.12.7",
